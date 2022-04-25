@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import { CharactersAction } from '../types/charactersActionTypes';
 
+// Creating function according to their type...
 export const initFetchData = (): CharactersAction => ({
     type: actionTypes.INIT_FETCH_DATA
 });

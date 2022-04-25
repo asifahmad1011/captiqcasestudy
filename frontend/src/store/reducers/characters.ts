@@ -2,6 +2,7 @@ import { CharactersAction } from '../types/charactersActionTypes';
 import { Characters } from "../types/Characters";
 import * as actionTypes from '../actions/actionTypes';
 
+// Managing existing state by updating the data...
 const updateObject = (oldObject: Object, updatedValues: Object) => {
     return {
         ...oldObject,
@@ -15,6 +16,7 @@ const initialState: Characters = {
     data: [],
 }
 
+// Using to update loading status of API call...
 const initFetchData = (state: Characters) => {
     return updateObject(state, {
         loading: true,
@@ -22,6 +24,7 @@ const initFetchData = (state: Characters) => {
     });
 };
 
+// Using this function when to update state when API is successfull...
 const fetchActionSuccess = (state: Characters, action: any) => {
     return updateObject(state, {
         loading: false,
@@ -29,6 +32,8 @@ const fetchActionSuccess = (state: Characters, action: any) => {
     })
 };
 
+
+// USing this function when there is some error during API call...
 const fetchActionFailed = (state: Characters, action: any) => {
     return updateObject(state, {
         loading: false,

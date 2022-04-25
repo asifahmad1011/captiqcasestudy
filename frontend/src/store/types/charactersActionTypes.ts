@@ -1,5 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 
+// Creating interfaces using action types...
+
 export interface InitFetchData {
     type: typeof actionTypes.INIT_FETCH_DATA
 }
@@ -14,9 +16,8 @@ export interface FetchActionFailed {
     error: string;
 }
 
-export type CharactersActionTypes =
+// Exporting actions
+export type CharactersAction =
     | InitFetchData
     | FetchActionSuccess
     | FetchActionFailed;
-
-export type CharactersAction = CharactersActionTypes;

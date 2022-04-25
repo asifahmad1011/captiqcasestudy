@@ -6,12 +6,14 @@ function App() {
 
   useEffect(() => {
     (async () => {
+      // Calling fetchDataFromURL at entry...
       await charactersController.fetchDataFromURL();
     })();
   }, []);
 
   return (
     <div className="App">
+      {/* Loading card component */}
       <Card />
     </div>
   );

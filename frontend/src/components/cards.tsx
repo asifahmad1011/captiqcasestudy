@@ -7,7 +7,7 @@ function Card() {
     const [viewMore, setViewMore] = useState(false);
     const charactersData: string[] = useSelector((state: any) => state.characters.data);
     console.info('Data', charactersData);
-    // Mapping each object in the data and creating card for each result.
+    // Mapping each object in the data and creating JSX element for each result.
     const characterCard: JSX.Element[] = charactersData.map((result: any) => {
         // console.info('Res', result);
         return(
@@ -41,6 +41,7 @@ function Card() {
             </span>
 
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
+                {/* Displaying JSX elements */}
                 {characterCard}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 30, width: 100, backgroundColor: '#000', borderRadius: 20, cursor: 'pointer'}}>
                     <span style={{ color: '#eee'}} onClick={() => setViewMore(!viewMore)}>
