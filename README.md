@@ -25,6 +25,7 @@ python -m venv captiq_challenge
 captiq_challenge\Scripts\activate
 ```
 Install libraries for back-end using following command
+Navigate to captiqcasestudy folder and run following command.
 ```bash
 pip install -r requirements.txt
 ```
